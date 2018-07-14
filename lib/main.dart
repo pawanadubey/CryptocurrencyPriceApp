@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     // TODO: implement build
     return new MaterialApp(
       theme: new ThemeData(
-        primarySwatch: Colors.red
+        brightness: Brightness.dark
       ),
       home: new HomePage(_currencies),
     );
@@ -41,7 +41,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   List _currencies;
   _HomePageState(this._currencies);
-  List<MaterialColor> cryptoColors=[Colors.blue, Colors.indigo, Colors.yellow];
 
 
   @override
@@ -77,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                     subtitle: new RichText(
                       text: new TextSpan(
                        children: [
-                         new TextSpan(text: "\$$usd\n", style: new TextStyle(color: Colors.black)),
+                         new TextSpan(text: "\$$usd\n", style: new TextStyle(color: Colors.white)),
                          percentageChangeTextWidget
                        ]
                       ),
